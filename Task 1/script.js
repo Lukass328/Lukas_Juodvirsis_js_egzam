@@ -35,9 +35,9 @@ formEl.addEventListener('submit', (e) => {
 function weightsTohtml (num) {
   const divEl = document.createElement('div');
   divEl.className = 'weights-container';
-  divEl.innerHTML = `<p> Pounds : ${num.pounds}</p>
-  <p> Grams : ${num.grams}</p>
-  <p> Ounces : ${num.ounces}</p>`;
+  divEl.innerHTML = `<p> Pounds : ${num.pounds.toFixed(2)}</p>
+  <p> Grams : ${num.grams.toFixed(2)}</p>
+  <p> Ounces : ${num.ounces.toFixed(2)}</p>`;
   outputEl.append(divEl);
   
 }
