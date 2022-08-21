@@ -57,5 +57,54 @@
   margin-top: 25px;
   padding: 30px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.user-pictures {
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 5px 5px 10px #7c7c7c;
+}
+.user-name:hover {
+  
+  transition: .5s ease;
+   background-color: white;
+}
+ 
+.user-name {
+  margin-bottom: 0.7rem;
+  font-size: 27px;
+  font-style: italic;
+  border: 4px solid #e9e9e9;
+  text-align: center;
+  background-color: #e0ebea;
+}
+
+@media screen and (max-width: 768px) {
+  .output-cointainer #output {
+    width: 80%;
+    margin-top: 25px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 566px) {
+  .output-cointainer #output {
+    width: 80%;
+    margin-top: 25px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 1.5rem;
+  }
 }

@@ -8,3 +8,37 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+
+const formEl = document.forms[0];
+const searchEl = document.getElementById('search');
+const calcBtn = document.getElementById('submit-btn');
+const outputEl = document.getElementById('output');
+
+
+
+formEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+   
+    const searchElValue = searchEl.value;
+    const atsWeight = {
+        pounds: searchElValue * 2.2046,
+        grams: searchElValue / 0.0010000,
+        ounces: searchElValue * 35.274,
+    }
+    
+    searchEl.value = '';
+
+    weightsTohtml(atsWeight);
+})
+
+
+function weightsTohtml (num) {
+  const divEl = document.createElement('div');
+  divEl.className = 'weights-container';
+  divEl.innerHTML = `<p> Pounds : ${num.pounds.toFixed(2)}</p>
+  <p> Grams : ${num.grams.toFixed(2)}</p>
+  <p> Ounces : ${num.ounces.toFixed(2)}</p>`;
+  outputEl.append(divEl);
+  
+}
+
